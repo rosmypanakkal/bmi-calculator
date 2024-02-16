@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <style>
+        .calc {
+          padding: 50px;
+          text-align: center;
+          display: flex;
+          background-color: rgb(230, 230, 231);
+         
+        }
+    
+        .content {
+          width: 700px;
+        }
+    
+        .img {
+          width: 300px;
+          padding-left: 70px;
+         
+        }
+        form{
+          text-align: left;
+          padding-left: 70px;
+          background-image: url('https://wallpapercave.com/wp/wp4661057.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        
+        </style>
+</head>
+
+<body>
+  <!-- nav bar -->
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzmsacTKx44wp5Lc6UW06ZPrJj43pyYNu81Q&usqp=CAU"
+          alt="Logo" width="70" height="64" class="d-inline-block align-text-top">
+        BMI Calculator
+      </a>
+    </div>
+  </nav>
+  <div class="calc">
+    <div class="content">
+      <form>
+        <h2>BMI CALCULATOR</h2>
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="text" id="age" name="age" title="Enter your age" placeholder="Enter your age" aria-label="Age">
+        <br><br>
+
+        <fieldset>
+          <legend>Gender</legend>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked />
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" />
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </fieldset>
+        <br><br>
+
+        <label for="height">Height (in cm)</label>
+        <input type="text" id="height" name="height" title="Enter your height" placeholder="Enter your height in cm"
+          aria-label="Height">
+        <br><br>
+
+        <label for="weight">Weight (in kg)</label>
+        <input type="text" id="weight" name="weight" title="Enter your weight" placeholder="Enter your weight in kg"
+          aria-label="Weight">
+        <br><br>
+
+        <button type="button" onclick="bmiCalc()" class="btn btn-success">Calculate</button>
+        <button type="button" onclick="clearText()" class="btn btn-success">Clear</button>
+        <br><br><br>
+      </form>
+    </div> 
+
+    <div class="img">
+      <label for="result">Result</label>
+      <input type="text" id="bmi" aria-label="BMI Result">
+      <!-- Add this div to display the result in HTML -->
+      <div id="resultText" aria-live="polite" role="status"></div>
+      <br><br>
+      <img src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/meter.png" alt=""
+        height="300px">
+    </div>
+  </div>
+</body>
+<footer class="bg-body-tertiary text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-body" href="https://mdbootstrap.com/">BMI-calculator.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<script src="./script.js"></script>
+
+</html>
